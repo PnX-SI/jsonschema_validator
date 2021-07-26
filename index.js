@@ -26,5 +26,6 @@ test(require(data_path));
 function test(data) {
   const valid = validate(data);
   if (valid) core.setOutput('validity', "Valid!")
-    else core.setOutput('validity', "Invalid: " + ajv.errorsText(validate.errors))
+    else
+        core.setFailed('validity', "Invalid: " + ajv.errorsText(validate.errors))
 };
