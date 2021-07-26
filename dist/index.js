@@ -8115,7 +8115,7 @@ function test(data) {
   const valid = validate(data);
   if (valid) core.setOutput('validity', "Valid!")
     else
-        core.setFailed("Invalid: " + ajv.errorsText(validate.errors))
+        core.setFailed("Invalid:\n" + ajv.errorsText(validate.errors, {separator: "\n"}))
 };
 })();
 
