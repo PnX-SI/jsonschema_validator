@@ -1,0 +1,21 @@
+name: 'Validate'
+description: 'Validate data with a schema and his referenced schemas'
+inputs:
+  main_schema_path:  # id of input
+    description: 'Path to the main schema'
+    required: true
+    default: '${{ github.workspace }}/schema.json'
+  additional_schemas_dir:  # id of input
+    description: 'Path to the folder containing the $refs schemas'
+    required: true
+    default: '${{ github.workspace }}/additional_schemas/'
+  data_path:  # id of input
+    description: 'Path to the JSON file to validate'
+    required: true
+    default: '${{ github.workspace }}/data.json'
+outputs:
+  validity: # output will be available to future steps
+    description: 'Validity of the data according to the schema'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
