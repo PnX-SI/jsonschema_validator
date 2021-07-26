@@ -1,23 +1,7 @@
 require('./sourcemap-register.js');/******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 2228:
-/***/ ((module) => {
-
-"use strict";
-module.exports = JSON.parse('{"$id":"https://raw.githubusercontent.com/ajv-validator/ajv/master/lib/refs/data.json#","description":"Meta-schema for $data reference (JSON AnySchema extension proposal)","type":"object","required":["$data"],"properties":{"$data":{"type":"string","anyOf":[{"format":"relative-json-pointer"},{"format":"json-pointer"}]}},"additionalProperties":false}');
-
-/***/ }),
-
-/***/ 278:
-/***/ ((module) => {
-
-"use strict";
-module.exports = JSON.parse('{"$schema":"http://json-schema.org/draft-07/schema#","$id":"http://json-schema.org/draft-07/schema#","title":"Core schema meta-schema","definitions":{"schemaArray":{"type":"array","minItems":1,"items":{"$ref":"#"}},"nonNegativeInteger":{"type":"integer","minimum":0},"nonNegativeIntegerDefault0":{"allOf":[{"$ref":"#/definitions/nonNegativeInteger"},{"default":0}]},"simpleTypes":{"enum":["array","boolean","integer","null","number","object","string"]},"stringArray":{"type":"array","items":{"type":"string"},"uniqueItems":true,"default":[]}},"type":["object","boolean"],"properties":{"$id":{"type":"string","format":"uri-reference"},"$schema":{"type":"string","format":"uri"},"$ref":{"type":"string","format":"uri-reference"},"$comment":{"type":"string"},"title":{"type":"string"},"description":{"type":"string"},"default":true,"readOnly":{"type":"boolean","default":false},"examples":{"type":"array","items":true},"multipleOf":{"type":"number","exclusiveMinimum":0},"maximum":{"type":"number"},"exclusiveMaximum":{"type":"number"},"minimum":{"type":"number"},"exclusiveMinimum":{"type":"number"},"maxLength":{"$ref":"#/definitions/nonNegativeInteger"},"minLength":{"$ref":"#/definitions/nonNegativeIntegerDefault0"},"pattern":{"type":"string","format":"regex"},"additionalItems":{"$ref":"#"},"items":{"anyOf":[{"$ref":"#"},{"$ref":"#/definitions/schemaArray"}],"default":true},"maxItems":{"$ref":"#/definitions/nonNegativeInteger"},"minItems":{"$ref":"#/definitions/nonNegativeIntegerDefault0"},"uniqueItems":{"type":"boolean","default":false},"contains":{"$ref":"#"},"maxProperties":{"$ref":"#/definitions/nonNegativeInteger"},"minProperties":{"$ref":"#/definitions/nonNegativeIntegerDefault0"},"required":{"$ref":"#/definitions/stringArray"},"additionalProperties":{"$ref":"#"},"definitions":{"type":"object","additionalProperties":{"$ref":"#"},"default":{}},"properties":{"type":"object","additionalProperties":{"$ref":"#"},"default":{}},"patternProperties":{"type":"object","additionalProperties":{"$ref":"#"},"propertyNames":{"format":"regex"},"default":{}},"dependencies":{"type":"object","additionalProperties":{"anyOf":[{"$ref":"#"},{"$ref":"#/definitions/stringArray"}]}},"propertyNames":{"$ref":"#"},"const":true,"enum":{"type":"array","items":true,"minItems":1,"uniqueItems":true},"type":{"anyOf":[{"$ref":"#/definitions/simpleTypes"},{"type":"array","items":{"$ref":"#/definitions/simpleTypes"},"minItems":1,"uniqueItems":true}]},"format":{"type":"string"},"contentMediaType":{"type":"string"},"contentEncoding":{"type":"string"},"if":{"$ref":"#"},"then":{"$ref":"#"},"else":{"$ref":"#"},"allOf":{"$ref":"#/definitions/schemaArray"},"anyOf":{"$ref":"#/definitions/schemaArray"},"oneOf":{"$ref":"#/definitions/schemaArray"},"not":{"$ref":"#"}},"default":true}');
-
-/***/ }),
-
-/***/ 5604:
+/***/ 7351:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -44,7 +28,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.issue = exports.issueCommand = void 0;
 const os = __importStar(__nccwpck_require__(2087));
-const utils_1 = __nccwpck_require__(1245);
+const utils_1 = __nccwpck_require__(5278);
 /**
  * Commands
  *
@@ -116,7 +100,7 @@ function escapeProperty(s) {
 
 /***/ }),
 
-/***/ 5127:
+/***/ 2186:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -151,9 +135,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getState = exports.saveState = exports.group = exports.endGroup = exports.startGroup = exports.info = exports.warning = exports.error = exports.debug = exports.isDebug = exports.setFailed = exports.setCommandEcho = exports.setOutput = exports.getBooleanInput = exports.getMultilineInput = exports.getInput = exports.addPath = exports.setSecret = exports.exportVariable = exports.ExitCode = void 0;
-const command_1 = __nccwpck_require__(5604);
-const file_command_1 = __nccwpck_require__(7352);
-const utils_1 = __nccwpck_require__(1245);
+const command_1 = __nccwpck_require__(7351);
+const file_command_1 = __nccwpck_require__(717);
+const utils_1 = __nccwpck_require__(5278);
 const os = __importStar(__nccwpck_require__(2087));
 const path = __importStar(__nccwpck_require__(5622));
 /**
@@ -417,7 +401,7 @@ exports.getState = getState;
 
 /***/ }),
 
-/***/ 7352:
+/***/ 717:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -448,7 +432,7 @@ exports.issueCommand = void 0;
 /* eslint-disable @typescript-eslint/no-explicit-any */
 const fs = __importStar(__nccwpck_require__(5747));
 const os = __importStar(__nccwpck_require__(2087));
-const utils_1 = __nccwpck_require__(1245);
+const utils_1 = __nccwpck_require__(5278);
 function issueCommand(command, message) {
     const filePath = process.env[`GITHUB_${command}`];
     if (!filePath) {
@@ -466,7 +450,7 @@ exports.issueCommand = issueCommand;
 
 /***/ }),
 
-/***/ 1245:
+/***/ 5278:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -493,7 +477,7 @@ exports.toCommandValue = toCommandValue;
 
 /***/ }),
 
-/***/ 5309:
+/***/ 407:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -668,15 +652,15 @@ function regex(str) {
 
 /***/ }),
 
-/***/ 6759:
+/***/ 567:
 /***/ ((module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const formats_1 = __nccwpck_require__(5309);
-const limit_1 = __nccwpck_require__(9154);
-const codegen_1 = __nccwpck_require__(3263);
+const formats_1 = __nccwpck_require__(407);
+const limit_1 = __nccwpck_require__(8433);
+const codegen_1 = __nccwpck_require__(9179);
 const fullName = new codegen_1.Name("fullFormats");
 const fastName = new codegen_1.Name("fastFormats");
 const formatsPlugin = (ajv, opts = { keywords: true }) => {
@@ -712,15 +696,15 @@ exports.default = formatsPlugin;
 
 /***/ }),
 
-/***/ 9154:
+/***/ 8433:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.formatLimitDefinition = void 0;
-const ajv_1 = __nccwpck_require__(9490);
-const codegen_1 = __nccwpck_require__(3263);
+const ajv_1 = __nccwpck_require__(2426);
+const codegen_1 = __nccwpck_require__(9179);
 const ops = codegen_1.operators;
 const KWDs = {
     formatMaximum: { okStr: "<=", ok: ops.LTE, fail: ops.GT },
@@ -788,16 +772,16 @@ exports.default = formatLimitPlugin;
 
 /***/ }),
 
-/***/ 9490:
+/***/ 2426:
 /***/ ((module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.CodeGen = exports.Name = exports.nil = exports.stringify = exports.str = exports._ = exports.KeywordCxt = void 0;
-const core_1 = __nccwpck_require__(9711);
-const draft7_1 = __nccwpck_require__(5723);
-const discriminator_1 = __nccwpck_require__(6015);
+const core_1 = __nccwpck_require__(2685);
+const draft7_1 = __nccwpck_require__(691);
+const discriminator_1 = __nccwpck_require__(4025);
 const draft7MetaSchema = __nccwpck_require__(278);
 const META_SUPPORT_DATA = ["/properties"];
 const META_SCHEMA_ID = "http://json-schema.org/draft-07/schema";
@@ -826,9 +810,9 @@ class Ajv extends core_1.default {
 module.exports = exports = Ajv;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.default = Ajv;
-var validate_1 = __nccwpck_require__(3929);
+var validate_1 = __nccwpck_require__(8955);
 Object.defineProperty(exports, "KeywordCxt", ({ enumerable: true, get: function () { return validate_1.KeywordCxt; } }));
-var codegen_1 = __nccwpck_require__(3263);
+var codegen_1 = __nccwpck_require__(9179);
 Object.defineProperty(exports, "_", ({ enumerable: true, get: function () { return codegen_1._; } }));
 Object.defineProperty(exports, "str", ({ enumerable: true, get: function () { return codegen_1.str; } }));
 Object.defineProperty(exports, "stringify", ({ enumerable: true, get: function () { return codegen_1.stringify; } }));
@@ -839,7 +823,7 @@ Object.defineProperty(exports, "CodeGen", ({ enumerable: true, get: function () 
 
 /***/ }),
 
-/***/ 265:
+/***/ 8358:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -993,16 +977,16 @@ exports.regexpCode = regexpCode;
 
 /***/ }),
 
-/***/ 3263:
+/***/ 9179:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.or = exports.and = exports.not = exports.CodeGen = exports.operators = exports.varKinds = exports.ValueScopeName = exports.ValueScope = exports.Scope = exports.Name = exports.regexpCode = exports.stringify = exports.getProperty = exports.nil = exports.strConcat = exports.str = exports._ = void 0;
-const code_1 = __nccwpck_require__(265);
-const scope_1 = __nccwpck_require__(8565);
-var code_2 = __nccwpck_require__(265);
+const code_1 = __nccwpck_require__(8358);
+const scope_1 = __nccwpck_require__(2893);
+var code_2 = __nccwpck_require__(8358);
 Object.defineProperty(exports, "_", ({ enumerable: true, get: function () { return code_2._; } }));
 Object.defineProperty(exports, "str", ({ enumerable: true, get: function () { return code_2.str; } }));
 Object.defineProperty(exports, "strConcat", ({ enumerable: true, get: function () { return code_2.strConcat; } }));
@@ -1011,7 +995,7 @@ Object.defineProperty(exports, "getProperty", ({ enumerable: true, get: function
 Object.defineProperty(exports, "stringify", ({ enumerable: true, get: function () { return code_2.stringify; } }));
 Object.defineProperty(exports, "regexpCode", ({ enumerable: true, get: function () { return code_2.regexpCode; } }));
 Object.defineProperty(exports, "Name", ({ enumerable: true, get: function () { return code_2.Name; } }));
-var scope_2 = __nccwpck_require__(8565);
+var scope_2 = __nccwpck_require__(2893);
 Object.defineProperty(exports, "Scope", ({ enumerable: true, get: function () { return scope_2.Scope; } }));
 Object.defineProperty(exports, "ValueScope", ({ enumerable: true, get: function () { return scope_2.ValueScope; } }));
 Object.defineProperty(exports, "ValueScopeName", ({ enumerable: true, get: function () { return scope_2.ValueScopeName; } }));
@@ -1697,14 +1681,14 @@ function par(x) {
 
 /***/ }),
 
-/***/ 8565:
+/***/ 2893:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ValueScope = exports.ValueScopeName = exports.Scope = exports.varKinds = exports.UsedValueState = void 0;
-const code_1 = __nccwpck_require__(265);
+const code_1 = __nccwpck_require__(8358);
 class ValueError extends Error {
     constructor(name) {
         super(`CodeGen: "code" for ${name} not defined`);
@@ -1847,16 +1831,16 @@ exports.ValueScope = ValueScope;
 
 /***/ }),
 
-/***/ 4580:
+/***/ 6150:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.extendErrors = exports.resetErrorsCount = exports.reportExtraError = exports.reportError = exports.keyword$DataError = exports.keywordError = void 0;
-const codegen_1 = __nccwpck_require__(3263);
-const util_1 = __nccwpck_require__(7174);
-const names_1 = __nccwpck_require__(8244);
+const codegen_1 = __nccwpck_require__(9179);
+const util_1 = __nccwpck_require__(3439);
+const names_1 = __nccwpck_require__(50);
 exports.keywordError = {
     message: ({ keyword }) => codegen_1.str `must pass "${keyword}" keyword validation`,
 };
@@ -1977,20 +1961,20 @@ function extraErrorProps(cxt, { params, message }, keyValues) {
 
 /***/ }),
 
-/***/ 2817:
+/***/ 813:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.resolveSchema = exports.getCompilingSchema = exports.resolveRef = exports.compileSchema = exports.SchemaEnv = void 0;
-const codegen_1 = __nccwpck_require__(3263);
-const validation_error_1 = __nccwpck_require__(5279);
-const names_1 = __nccwpck_require__(8244);
-const resolve_1 = __nccwpck_require__(5154);
-const util_1 = __nccwpck_require__(7174);
-const validate_1 = __nccwpck_require__(3929);
-const URI = __nccwpck_require__(2222);
+const codegen_1 = __nccwpck_require__(9179);
+const validation_error_1 = __nccwpck_require__(7616);
+const names_1 = __nccwpck_require__(50);
+const resolve_1 = __nccwpck_require__(6646);
+const util_1 = __nccwpck_require__(3439);
+const validate_1 = __nccwpck_require__(8955);
+const URI = __nccwpck_require__(20);
 class SchemaEnv {
     constructor(env) {
         var _a;
@@ -2226,13 +2210,13 @@ function getJsonPointer(parsedRef, { baseId, schema, root }) {
 
 /***/ }),
 
-/***/ 8244:
+/***/ 50:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const codegen_1 = __nccwpck_require__(3263);
+const codegen_1 = __nccwpck_require__(9179);
 const names = {
     // validation function arguments
     data: new codegen_1.Name("data"),
@@ -2261,13 +2245,13 @@ exports.default = names;
 
 /***/ }),
 
-/***/ 5396:
+/***/ 8190:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const resolve_1 = __nccwpck_require__(5154);
+const resolve_1 = __nccwpck_require__(6646);
 class MissingRefError extends Error {
     constructor(baseId, ref, msg) {
         super(msg || `can't resolve reference ${ref} from id ${baseId}`);
@@ -2280,17 +2264,17 @@ exports.default = MissingRefError;
 
 /***/ }),
 
-/***/ 5154:
+/***/ 6646:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getSchemaRefs = exports.resolveUrl = exports.normalizeId = exports._getFullPath = exports.getFullPath = exports.inlineRef = void 0;
-const util_1 = __nccwpck_require__(7174);
-const equal = __nccwpck_require__(2570);
-const traverse = __nccwpck_require__(1934);
-const URI = __nccwpck_require__(2222);
+const util_1 = __nccwpck_require__(3439);
+const equal = __nccwpck_require__(8206);
+const traverse = __nccwpck_require__(2533);
+const URI = __nccwpck_require__(20);
 // TODO refactor to use keyword definitions
 const SIMPLE_INLINED = new Set([
     "type",
@@ -2440,7 +2424,7 @@ exports.getSchemaRefs = getSchemaRefs;
 
 /***/ }),
 
-/***/ 9621:
+/***/ 1785:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -2473,15 +2457,15 @@ exports.getRules = getRules;
 
 /***/ }),
 
-/***/ 7174:
+/***/ 3439:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.checkStrictMode = exports.getErrorPath = exports.Type = exports.useFunc = exports.setEvaluated = exports.evaluatedPropsToName = exports.mergeEvaluated = exports.eachItem = exports.unescapeJsonPointer = exports.escapeJsonPointer = exports.escapeFragment = exports.unescapeFragment = exports.schemaRefOrVal = exports.schemaHasRulesButRef = exports.schemaHasRules = exports.checkUnknownRules = exports.alwaysValidSchema = exports.toHash = void 0;
-const codegen_1 = __nccwpck_require__(3263);
-const code_1 = __nccwpck_require__(265);
+const codegen_1 = __nccwpck_require__(9179);
+const code_1 = __nccwpck_require__(8358);
 // TODO refactor to use Set
 function toHash(arr) {
     const hash = {};
@@ -2658,7 +2642,7 @@ exports.checkStrictMode = checkStrictMode;
 
 /***/ }),
 
-/***/ 8720:
+/***/ 3627:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -2684,16 +2668,16 @@ exports.shouldUseRule = shouldUseRule;
 
 /***/ }),
 
-/***/ 7232:
+/***/ 6214:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.boolOrEmptySchema = exports.topBoolOrEmptySchema = void 0;
-const errors_1 = __nccwpck_require__(4580);
-const codegen_1 = __nccwpck_require__(3263);
-const names_1 = __nccwpck_require__(8244);
+const errors_1 = __nccwpck_require__(6150);
+const codegen_1 = __nccwpck_require__(9179);
+const names_1 = __nccwpck_require__(50);
 const boolError = {
     message: "boolean schema is false",
 };
@@ -2741,18 +2725,18 @@ function falseSchemaError(it, overrideAllErrors) {
 
 /***/ }),
 
-/***/ 6242:
+/***/ 7725:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.reportTypeError = exports.checkDataTypes = exports.checkDataType = exports.coerceAndCheckDataType = exports.getJSONTypes = exports.getSchemaTypes = exports.DataType = void 0;
-const rules_1 = __nccwpck_require__(9621);
-const applicability_1 = __nccwpck_require__(8720);
-const errors_1 = __nccwpck_require__(4580);
-const codegen_1 = __nccwpck_require__(3263);
-const util_1 = __nccwpck_require__(7174);
+const rules_1 = __nccwpck_require__(1785);
+const applicability_1 = __nccwpck_require__(3627);
+const errors_1 = __nccwpck_require__(6150);
+const codegen_1 = __nccwpck_require__(9179);
+const util_1 = __nccwpck_require__(3439);
 var DataType;
 (function (DataType) {
     DataType[DataType["Correct"] = 0] = "Correct";
@@ -2950,15 +2934,15 @@ function getTypeErrorContext(it) {
 
 /***/ }),
 
-/***/ 873:
+/***/ 9593:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.assignDefaults = void 0;
-const codegen_1 = __nccwpck_require__(3263);
-const util_1 = __nccwpck_require__(7174);
+const codegen_1 = __nccwpck_require__(9179);
+const util_1 = __nccwpck_require__(3439);
 function assignDefaults(it, ty) {
     const { properties, items } = it.schema;
     if (ty === "object" && properties) {
@@ -2992,25 +2976,25 @@ function assignDefault(it, prop, defaultValue) {
 
 /***/ }),
 
-/***/ 3929:
+/***/ 8955:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getData = exports.KeywordCxt = exports.validateFunctionCode = void 0;
-const boolSchema_1 = __nccwpck_require__(7232);
-const dataType_1 = __nccwpck_require__(6242);
-const applicability_1 = __nccwpck_require__(8720);
-const dataType_2 = __nccwpck_require__(6242);
-const defaults_1 = __nccwpck_require__(873);
-const keyword_1 = __nccwpck_require__(4690);
-const subschema_1 = __nccwpck_require__(8302);
-const codegen_1 = __nccwpck_require__(3263);
-const names_1 = __nccwpck_require__(8244);
-const resolve_1 = __nccwpck_require__(5154);
-const util_1 = __nccwpck_require__(7174);
-const errors_1 = __nccwpck_require__(4580);
+const boolSchema_1 = __nccwpck_require__(6214);
+const dataType_1 = __nccwpck_require__(7725);
+const applicability_1 = __nccwpck_require__(3627);
+const dataType_2 = __nccwpck_require__(7725);
+const defaults_1 = __nccwpck_require__(9593);
+const keyword_1 = __nccwpck_require__(8732);
+const subschema_1 = __nccwpck_require__(3896);
+const codegen_1 = __nccwpck_require__(9179);
+const names_1 = __nccwpck_require__(50);
+const resolve_1 = __nccwpck_require__(6646);
+const util_1 = __nccwpck_require__(3439);
+const errors_1 = __nccwpck_require__(6150);
 // schema compilation - generates validation function, subschemaCode (below) is used for subschemas
 function validateFunctionCode(it) {
     if (isSchemaObj(it)) {
@@ -3509,17 +3493,17 @@ exports.getData = getData;
 
 /***/ }),
 
-/***/ 4690:
+/***/ 8732:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.validateKeywordUsage = exports.validSchemaType = exports.funcKeywordCode = exports.macroKeywordCode = void 0;
-const codegen_1 = __nccwpck_require__(3263);
-const names_1 = __nccwpck_require__(8244);
-const code_1 = __nccwpck_require__(8637);
-const errors_1 = __nccwpck_require__(4580);
+const codegen_1 = __nccwpck_require__(9179);
+const names_1 = __nccwpck_require__(50);
+const code_1 = __nccwpck_require__(4205);
+const errors_1 = __nccwpck_require__(6150);
 function macroKeywordCode(cxt, def) {
     const { gen, keyword, schema, parentSchema, it } = cxt;
     const macroSchema = def.macro.call(it.self, schema, parentSchema, it);
@@ -3640,15 +3624,15 @@ exports.validateKeywordUsage = validateKeywordUsage;
 
 /***/ }),
 
-/***/ 8302:
+/***/ 3896:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.extendSubschemaMode = exports.extendSubschemaData = exports.getSubschema = void 0;
-const codegen_1 = __nccwpck_require__(3263);
-const util_1 = __nccwpck_require__(7174);
+const codegen_1 = __nccwpck_require__(9179);
+const util_1 = __nccwpck_require__(3439);
 function getSubschema(it, { keyword, schemaProp, schema, schemaPath, errSchemaPath, topSchemaRef }) {
     if (keyword !== undefined && schema !== undefined) {
         throw new Error('both "keyword" and "schema" passed, only one allowed');
@@ -3728,30 +3712,30 @@ exports.extendSubschemaMode = extendSubschemaMode;
 
 /***/ }),
 
-/***/ 9711:
+/***/ 2685:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.CodeGen = exports.Name = exports.nil = exports.stringify = exports.str = exports._ = exports.KeywordCxt = void 0;
-var validate_1 = __nccwpck_require__(3929);
+var validate_1 = __nccwpck_require__(8955);
 Object.defineProperty(exports, "KeywordCxt", ({ enumerable: true, get: function () { return validate_1.KeywordCxt; } }));
-var codegen_1 = __nccwpck_require__(3263);
+var codegen_1 = __nccwpck_require__(9179);
 Object.defineProperty(exports, "_", ({ enumerable: true, get: function () { return codegen_1._; } }));
 Object.defineProperty(exports, "str", ({ enumerable: true, get: function () { return codegen_1.str; } }));
 Object.defineProperty(exports, "stringify", ({ enumerable: true, get: function () { return codegen_1.stringify; } }));
 Object.defineProperty(exports, "nil", ({ enumerable: true, get: function () { return codegen_1.nil; } }));
 Object.defineProperty(exports, "Name", ({ enumerable: true, get: function () { return codegen_1.Name; } }));
 Object.defineProperty(exports, "CodeGen", ({ enumerable: true, get: function () { return codegen_1.CodeGen; } }));
-const validation_error_1 = __nccwpck_require__(5279);
-const ref_error_1 = __nccwpck_require__(5396);
-const rules_1 = __nccwpck_require__(9621);
-const compile_1 = __nccwpck_require__(2817);
-const codegen_2 = __nccwpck_require__(3263);
-const resolve_1 = __nccwpck_require__(5154);
-const dataType_1 = __nccwpck_require__(6242);
-const util_1 = __nccwpck_require__(7174);
+const validation_error_1 = __nccwpck_require__(7616);
+const ref_error_1 = __nccwpck_require__(8190);
+const rules_1 = __nccwpck_require__(1785);
+const compile_1 = __nccwpck_require__(813);
+const codegen_2 = __nccwpck_require__(9179);
+const resolve_1 = __nccwpck_require__(6646);
+const dataType_1 = __nccwpck_require__(7725);
+const util_1 = __nccwpck_require__(3439);
 const $dataRefSchema = __nccwpck_require__(2228);
 const META_IGNORE_OPTIONS = ["removeAdditional", "useDefaults", "coerceTypes"];
 const EXT_SCOPE_NAMES = new Set([
@@ -4346,21 +4330,21 @@ function schemaOrData(schema) {
 
 /***/ }),
 
-/***/ 2846:
+/***/ 3809:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 // https://github.com/ajv-validator/ajv/issues/889
-const equal = __nccwpck_require__(2570);
+const equal = __nccwpck_require__(8206);
 equal.code = 'require("ajv/dist/runtime/equal").default';
 exports.default = equal;
 //# sourceMappingURL=equal.js.map
 
 /***/ }),
 
-/***/ 4656:
+/***/ 2470:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -4391,7 +4375,7 @@ ucs2length.code = 'require("ajv/dist/runtime/ucs2length").default';
 
 /***/ }),
 
-/***/ 5279:
+/***/ 7616:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -4409,15 +4393,15 @@ exports.default = ValidationError;
 
 /***/ }),
 
-/***/ 1698:
+/***/ 4720:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.validateAdditionalItems = void 0;
-const codegen_1 = __nccwpck_require__(3263);
-const util_1 = __nccwpck_require__(7174);
+const codegen_1 = __nccwpck_require__(9179);
+const util_1 = __nccwpck_require__(3439);
 const error = {
     message: ({ params: { len } }) => codegen_1.str `must NOT have more than ${len} items`,
     params: ({ params: { len } }) => codegen_1._ `{limit: ${len}}`,
@@ -4465,16 +4449,16 @@ exports.default = def;
 
 /***/ }),
 
-/***/ 6366:
+/***/ 3481:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const code_1 = __nccwpck_require__(8637);
-const codegen_1 = __nccwpck_require__(3263);
-const names_1 = __nccwpck_require__(8244);
-const util_1 = __nccwpck_require__(7174);
+const code_1 = __nccwpck_require__(4205);
+const codegen_1 = __nccwpck_require__(9179);
+const names_1 = __nccwpck_require__(50);
+const util_1 = __nccwpck_require__(3439);
 const error = {
     message: "must NOT have additional properties",
     params: ({ params }) => codegen_1._ `{additionalProperty: ${params.additionalProperty}}`,
@@ -4578,13 +4562,13 @@ exports.default = def;
 
 /***/ }),
 
-/***/ 5861:
+/***/ 8406:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const util_1 = __nccwpck_require__(7174);
+const util_1 = __nccwpck_require__(3439);
 const def = {
     keyword: "allOf",
     schemaType: "array",
@@ -4608,13 +4592,13 @@ exports.default = def;
 
 /***/ }),
 
-/***/ 8111:
+/***/ 8168:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const code_1 = __nccwpck_require__(8637);
+const code_1 = __nccwpck_require__(4205);
 const def = {
     keyword: "anyOf",
     schemaType: "array",
@@ -4627,14 +4611,14 @@ exports.default = def;
 
 /***/ }),
 
-/***/ 7315:
+/***/ 9535:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const codegen_1 = __nccwpck_require__(3263);
-const util_1 = __nccwpck_require__(7174);
+const codegen_1 = __nccwpck_require__(9179);
+const util_1 = __nccwpck_require__(3439);
 const error = {
     message: ({ params: { min, max } }) => max === undefined
         ? codegen_1.str `must contain at least ${min} valid item(s)`
@@ -4721,16 +4705,16 @@ exports.default = def;
 
 /***/ }),
 
-/***/ 8668:
+/***/ 4611:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.validateSchemaDeps = exports.validatePropertyDeps = exports.error = void 0;
-const codegen_1 = __nccwpck_require__(3263);
-const util_1 = __nccwpck_require__(7174);
-const code_1 = __nccwpck_require__(8637);
+const codegen_1 = __nccwpck_require__(9179);
+const util_1 = __nccwpck_require__(3439);
+const code_1 = __nccwpck_require__(4205);
 exports.error = {
     message: ({ params: { property, depsCount, deps } }) => {
         const property_ies = depsCount === 1 ? "property" : "properties";
@@ -4813,14 +4797,14 @@ exports.default = def;
 
 /***/ }),
 
-/***/ 6175:
+/***/ 7701:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const codegen_1 = __nccwpck_require__(3263);
-const util_1 = __nccwpck_require__(7174);
+const codegen_1 = __nccwpck_require__(9179);
+const util_1 = __nccwpck_require__(3439);
 const error = {
     message: ({ params }) => codegen_1.str `must match "${params.ifClause}" schema`,
     params: ({ params }) => codegen_1._ `{failingKeyword: ${params.ifClause}}`,
@@ -4886,28 +4870,28 @@ exports.default = def;
 
 /***/ }),
 
-/***/ 6087:
+/***/ 3048:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const additionalItems_1 = __nccwpck_require__(1698);
-const prefixItems_1 = __nccwpck_require__(8106);
-const items_1 = __nccwpck_require__(2346);
-const items2020_1 = __nccwpck_require__(885);
-const contains_1 = __nccwpck_require__(7315);
-const dependencies_1 = __nccwpck_require__(8668);
-const propertyNames_1 = __nccwpck_require__(81);
-const additionalProperties_1 = __nccwpck_require__(6366);
-const properties_1 = __nccwpck_require__(1471);
-const patternProperties_1 = __nccwpck_require__(7409);
-const not_1 = __nccwpck_require__(2360);
-const anyOf_1 = __nccwpck_require__(8111);
-const oneOf_1 = __nccwpck_require__(6449);
-const allOf_1 = __nccwpck_require__(5861);
-const if_1 = __nccwpck_require__(6175);
-const thenElse_1 = __nccwpck_require__(9854);
+const additionalItems_1 = __nccwpck_require__(4720);
+const prefixItems_1 = __nccwpck_require__(9498);
+const items_1 = __nccwpck_require__(8008);
+const items2020_1 = __nccwpck_require__(9084);
+const contains_1 = __nccwpck_require__(9535);
+const dependencies_1 = __nccwpck_require__(4611);
+const propertyNames_1 = __nccwpck_require__(2554);
+const additionalProperties_1 = __nccwpck_require__(3481);
+const properties_1 = __nccwpck_require__(7666);
+const patternProperties_1 = __nccwpck_require__(5157);
+const not_1 = __nccwpck_require__(8720);
+const anyOf_1 = __nccwpck_require__(8168);
+const oneOf_1 = __nccwpck_require__(6434);
+const allOf_1 = __nccwpck_require__(8406);
+const if_1 = __nccwpck_require__(7701);
+const thenElse_1 = __nccwpck_require__(7680);
 function getApplicator(draft2020 = false) {
     const applicator = [
         // any
@@ -4937,16 +4921,16 @@ exports.default = getApplicator;
 
 /***/ }),
 
-/***/ 2346:
+/***/ 8008:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.validateTuple = void 0;
-const codegen_1 = __nccwpck_require__(3263);
-const util_1 = __nccwpck_require__(7174);
-const code_1 = __nccwpck_require__(8637);
+const codegen_1 = __nccwpck_require__(9179);
+const util_1 = __nccwpck_require__(3439);
+const code_1 = __nccwpck_require__(4205);
 const def = {
     keyword: "items",
     type: "array",
@@ -4996,16 +4980,16 @@ exports.default = def;
 
 /***/ }),
 
-/***/ 885:
+/***/ 9084:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const codegen_1 = __nccwpck_require__(3263);
-const util_1 = __nccwpck_require__(7174);
-const code_1 = __nccwpck_require__(8637);
-const additionalItems_1 = __nccwpck_require__(1698);
+const codegen_1 = __nccwpck_require__(9179);
+const util_1 = __nccwpck_require__(3439);
+const code_1 = __nccwpck_require__(4205);
+const additionalItems_1 = __nccwpck_require__(4720);
 const error = {
     message: ({ params: { len } }) => codegen_1.str `must NOT have more than ${len} items`,
     params: ({ params: { len } }) => codegen_1._ `{limit: ${len}}`,
@@ -5033,13 +5017,13 @@ exports.default = def;
 
 /***/ }),
 
-/***/ 2360:
+/***/ 8720:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const util_1 = __nccwpck_require__(7174);
+const util_1 = __nccwpck_require__(3439);
 const def = {
     keyword: "not",
     schemaType: ["object", "boolean"],
@@ -5066,14 +5050,14 @@ exports.default = def;
 
 /***/ }),
 
-/***/ 6449:
+/***/ 6434:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const codegen_1 = __nccwpck_require__(3263);
-const util_1 = __nccwpck_require__(7174);
+const codegen_1 = __nccwpck_require__(9179);
+const util_1 = __nccwpck_require__(3439);
 const error = {
     message: "must match exactly one schema in oneOf",
     params: ({ params }) => codegen_1._ `{passingSchemas: ${params.passing}}`,
@@ -5133,16 +5117,16 @@ exports.default = def;
 
 /***/ }),
 
-/***/ 7409:
+/***/ 5157:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const code_1 = __nccwpck_require__(8637);
-const codegen_1 = __nccwpck_require__(3263);
-const util_1 = __nccwpck_require__(7174);
-const util_2 = __nccwpck_require__(7174);
+const code_1 = __nccwpck_require__(4205);
+const codegen_1 = __nccwpck_require__(9179);
+const util_1 = __nccwpck_require__(3439);
+const util_2 = __nccwpck_require__(3439);
 const def = {
     keyword: "patternProperties",
     type: "object",
@@ -5215,13 +5199,13 @@ exports.default = def;
 
 /***/ }),
 
-/***/ 8106:
+/***/ 9498:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const items_1 = __nccwpck_require__(2346);
+const items_1 = __nccwpck_require__(8008);
 const def = {
     keyword: "prefixItems",
     type: "array",
@@ -5234,16 +5218,16 @@ exports.default = def;
 
 /***/ }),
 
-/***/ 1471:
+/***/ 7666:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const validate_1 = __nccwpck_require__(3929);
-const code_1 = __nccwpck_require__(8637);
-const util_1 = __nccwpck_require__(7174);
-const additionalProperties_1 = __nccwpck_require__(6366);
+const validate_1 = __nccwpck_require__(8955);
+const code_1 = __nccwpck_require__(4205);
+const util_1 = __nccwpck_require__(3439);
+const additionalProperties_1 = __nccwpck_require__(3481);
 const def = {
     keyword: "properties",
     type: "object",
@@ -5295,14 +5279,14 @@ exports.default = def;
 
 /***/ }),
 
-/***/ 81:
+/***/ 2554:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const codegen_1 = __nccwpck_require__(3263);
-const util_1 = __nccwpck_require__(7174);
+const codegen_1 = __nccwpck_require__(9179);
+const util_1 = __nccwpck_require__(3439);
 const error = {
     message: "property name must be valid",
     params: ({ params }) => codegen_1._ `{propertyName: ${params.propertyName}}`,
@@ -5340,13 +5324,13 @@ exports.default = def;
 
 /***/ }),
 
-/***/ 9854:
+/***/ 7680:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const util_1 = __nccwpck_require__(7174);
+const util_1 = __nccwpck_require__(3439);
 const def = {
     keyword: ["then", "else"],
     schemaType: ["object", "boolean"],
@@ -5360,16 +5344,16 @@ exports.default = def;
 
 /***/ }),
 
-/***/ 8637:
+/***/ 4205:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.validateUnion = exports.validateArray = exports.usePattern = exports.callValidateCode = exports.schemaProperties = exports.allSchemaProperties = exports.noPropertyInData = exports.propertyInData = exports.isOwnProperty = exports.hasPropFunc = exports.reportMissingProp = exports.checkMissingProp = exports.checkReportMissingProp = void 0;
-const codegen_1 = __nccwpck_require__(3263);
-const util_1 = __nccwpck_require__(7174);
-const names_1 = __nccwpck_require__(8244);
+const codegen_1 = __nccwpck_require__(9179);
+const util_1 = __nccwpck_require__(3439);
+const names_1 = __nccwpck_require__(50);
 function checkReportMissingProp(cxt, prop) {
     const { gen, data, it } = cxt;
     gen.if(noPropertyInData(gen, data, prop, it.opts.ownProperties), () => {
@@ -5494,7 +5478,7 @@ exports.validateUnion = validateUnion;
 
 /***/ }),
 
-/***/ 7619:
+/***/ 1674:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -5511,14 +5495,14 @@ exports.default = def;
 
 /***/ }),
 
-/***/ 3355:
+/***/ 3707:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const id_1 = __nccwpck_require__(7619);
-const ref_1 = __nccwpck_require__(173);
+const id_1 = __nccwpck_require__(1674);
+const ref_1 = __nccwpck_require__(6532);
 const core = [
     "$schema",
     "$id",
@@ -5534,19 +5518,19 @@ exports.default = core;
 
 /***/ }),
 
-/***/ 173:
+/***/ 6532:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.callRef = exports.getValidate = void 0;
-const ref_error_1 = __nccwpck_require__(5396);
-const code_1 = __nccwpck_require__(8637);
-const codegen_1 = __nccwpck_require__(3263);
-const names_1 = __nccwpck_require__(8244);
-const compile_1 = __nccwpck_require__(2817);
-const util_1 = __nccwpck_require__(7174);
+const ref_error_1 = __nccwpck_require__(8190);
+const code_1 = __nccwpck_require__(4205);
+const codegen_1 = __nccwpck_require__(9179);
+const names_1 = __nccwpck_require__(50);
+const compile_1 = __nccwpck_require__(813);
+const util_1 = __nccwpck_require__(3439);
 const def = {
     keyword: "$ref",
     schemaType: "string",
@@ -5663,14 +5647,14 @@ exports.default = def;
 
 /***/ }),
 
-/***/ 6015:
+/***/ 4025:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const codegen_1 = __nccwpck_require__(3263);
-const types_1 = __nccwpck_require__(2933);
+const codegen_1 = __nccwpck_require__(9179);
+const types_1 = __nccwpck_require__(8374);
 const error = {
     message: ({ params: { discrError, tagName } }) => discrError === types_1.DiscrError.Tag
         ? `tag "${tagName}" must be string`
@@ -5763,7 +5747,7 @@ exports.default = def;
 
 /***/ }),
 
-/***/ 2933:
+/***/ 8374:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -5779,17 +5763,17 @@ var DiscrError;
 
 /***/ }),
 
-/***/ 5723:
+/***/ 691:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const core_1 = __nccwpck_require__(3355);
-const validation_1 = __nccwpck_require__(2736);
-const applicator_1 = __nccwpck_require__(6087);
-const format_1 = __nccwpck_require__(8183);
-const metadata_1 = __nccwpck_require__(4487);
+const core_1 = __nccwpck_require__(3707);
+const validation_1 = __nccwpck_require__(9805);
+const applicator_1 = __nccwpck_require__(3048);
+const format_1 = __nccwpck_require__(9841);
+const metadata_1 = __nccwpck_require__(5799);
 const draft7Vocabularies = [
     core_1.default,
     validation_1.default,
@@ -5803,13 +5787,13 @@ exports.default = draft7Vocabularies;
 
 /***/ }),
 
-/***/ 1467:
+/***/ 3691:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const codegen_1 = __nccwpck_require__(3263);
+const codegen_1 = __nccwpck_require__(9179);
 const error = {
     message: ({ schemaCode }) => codegen_1.str `must match format "${schemaCode}"`,
     params: ({ schemaCode }) => codegen_1._ `{format: ${schemaCode}}`,
@@ -5902,20 +5886,20 @@ exports.default = def;
 
 /***/ }),
 
-/***/ 8183:
+/***/ 9841:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const format_1 = __nccwpck_require__(1467);
+const format_1 = __nccwpck_require__(3691);
 const format = [format_1.default];
 exports.default = format;
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 4487:
+/***/ 5799:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -5940,15 +5924,15 @@ exports.contentVocabulary = [
 
 /***/ }),
 
-/***/ 2128:
+/***/ 3694:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const codegen_1 = __nccwpck_require__(3263);
-const util_1 = __nccwpck_require__(7174);
-const equal_1 = __nccwpck_require__(2846);
+const codegen_1 = __nccwpck_require__(9179);
+const util_1 = __nccwpck_require__(3439);
+const equal_1 = __nccwpck_require__(3809);
 const error = {
     message: "must be equal to constant",
     params: ({ schemaCode }) => codegen_1._ `{allowedValue: ${schemaCode}}`,
@@ -5972,15 +5956,15 @@ exports.default = def;
 
 /***/ }),
 
-/***/ 4546:
+/***/ 5529:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const codegen_1 = __nccwpck_require__(3263);
-const util_1 = __nccwpck_require__(7174);
-const equal_1 = __nccwpck_require__(2846);
+const codegen_1 = __nccwpck_require__(9179);
+const util_1 = __nccwpck_require__(3439);
+const equal_1 = __nccwpck_require__(3809);
 const error = {
     message: "must be equal to one of the allowed values",
     params: ({ schemaCode }) => codegen_1._ `{allowedValues: ${schemaCode}}`,
@@ -6026,22 +6010,22 @@ exports.default = def;
 
 /***/ }),
 
-/***/ 2736:
+/***/ 9805:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const limitNumber_1 = __nccwpck_require__(7286);
-const multipleOf_1 = __nccwpck_require__(7195);
-const limitLength_1 = __nccwpck_require__(2092);
-const pattern_1 = __nccwpck_require__(716);
-const limitProperties_1 = __nccwpck_require__(3662);
-const required_1 = __nccwpck_require__(1825);
-const limitItems_1 = __nccwpck_require__(530);
-const uniqueItems_1 = __nccwpck_require__(8575);
-const const_1 = __nccwpck_require__(2128);
-const enum_1 = __nccwpck_require__(4546);
+const limitNumber_1 = __nccwpck_require__(345);
+const multipleOf_1 = __nccwpck_require__(3201);
+const limitLength_1 = __nccwpck_require__(7598);
+const pattern_1 = __nccwpck_require__(4960);
+const limitProperties_1 = __nccwpck_require__(3470);
+const required_1 = __nccwpck_require__(3602);
+const limitItems_1 = __nccwpck_require__(3924);
+const uniqueItems_1 = __nccwpck_require__(9351);
+const const_1 = __nccwpck_require__(3694);
+const enum_1 = __nccwpck_require__(5529);
 const validation = [
     // number
     limitNumber_1.default,
@@ -6066,13 +6050,13 @@ exports.default = validation;
 
 /***/ }),
 
-/***/ 530:
+/***/ 3924:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const codegen_1 = __nccwpck_require__(3263);
+const codegen_1 = __nccwpck_require__(9179);
 const error = {
     message({ keyword, schemaCode }) {
         const comp = keyword === "maxItems" ? "more" : "fewer";
@@ -6097,15 +6081,15 @@ exports.default = def;
 
 /***/ }),
 
-/***/ 2092:
+/***/ 7598:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const codegen_1 = __nccwpck_require__(3263);
-const util_1 = __nccwpck_require__(7174);
-const ucs2length_1 = __nccwpck_require__(4656);
+const codegen_1 = __nccwpck_require__(9179);
+const util_1 = __nccwpck_require__(3439);
+const ucs2length_1 = __nccwpck_require__(2470);
 const error = {
     message({ keyword, schemaCode }) {
         const comp = keyword === "maxLength" ? "more" : "fewer";
@@ -6131,13 +6115,13 @@ exports.default = def;
 
 /***/ }),
 
-/***/ 7286:
+/***/ 345:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const codegen_1 = __nccwpck_require__(3263);
+const codegen_1 = __nccwpck_require__(9179);
 const ops = codegen_1.operators;
 const KWDs = {
     maximum: { okStr: "<=", ok: ops.LTE, fail: ops.GT },
@@ -6165,13 +6149,13 @@ exports.default = def;
 
 /***/ }),
 
-/***/ 3662:
+/***/ 3470:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const codegen_1 = __nccwpck_require__(3263);
+const codegen_1 = __nccwpck_require__(9179);
 const error = {
     message({ keyword, schemaCode }) {
         const comp = keyword === "maxProperties" ? "more" : "fewer";
@@ -6196,13 +6180,13 @@ exports.default = def;
 
 /***/ }),
 
-/***/ 7195:
+/***/ 3201:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const codegen_1 = __nccwpck_require__(3263);
+const codegen_1 = __nccwpck_require__(9179);
 const error = {
     message: ({ schemaCode }) => codegen_1.str `must be multiple of ${schemaCode}`,
     params: ({ schemaCode }) => codegen_1._ `{multipleOf: ${schemaCode}}`,
@@ -6229,14 +6213,14 @@ exports.default = def;
 
 /***/ }),
 
-/***/ 716:
+/***/ 4960:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const code_1 = __nccwpck_require__(8637);
-const codegen_1 = __nccwpck_require__(3263);
+const code_1 = __nccwpck_require__(4205);
+const codegen_1 = __nccwpck_require__(9179);
 const error = {
     message: ({ schemaCode }) => codegen_1.str `must match pattern "${schemaCode}"`,
     params: ({ schemaCode }) => codegen_1._ `{pattern: ${schemaCode}}`,
@@ -6260,15 +6244,15 @@ exports.default = def;
 
 /***/ }),
 
-/***/ 1825:
+/***/ 3602:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const code_1 = __nccwpck_require__(8637);
-const codegen_1 = __nccwpck_require__(3263);
-const util_1 = __nccwpck_require__(7174);
+const code_1 = __nccwpck_require__(4205);
+const codegen_1 = __nccwpck_require__(9179);
+const util_1 = __nccwpck_require__(3439);
 const error = {
     message: ({ params: { missingProperty } }) => codegen_1.str `must have required property '${missingProperty}'`,
     params: ({ params: { missingProperty } }) => codegen_1._ `{missingProperty: ${missingProperty}}`,
@@ -6346,16 +6330,16 @@ exports.default = def;
 
 /***/ }),
 
-/***/ 8575:
+/***/ 9351:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const dataType_1 = __nccwpck_require__(6242);
-const codegen_1 = __nccwpck_require__(3263);
-const util_1 = __nccwpck_require__(7174);
-const equal_1 = __nccwpck_require__(2846);
+const dataType_1 = __nccwpck_require__(7725);
+const codegen_1 = __nccwpck_require__(9179);
+const util_1 = __nccwpck_require__(3439);
+const equal_1 = __nccwpck_require__(3809);
 const error = {
     message: ({ params: { i, j } }) => codegen_1.str `must NOT have duplicate items (items ## ${j} and ${i} are identical)`,
     params: ({ params: { i, j } }) => codegen_1._ `{i: ${i}, j: ${j}}`,
@@ -6417,7 +6401,7 @@ exports.default = def;
 
 /***/ }),
 
-/***/ 2570:
+/***/ 8206:
 /***/ ((module) => {
 
 "use strict";
@@ -6471,7 +6455,7 @@ module.exports = function equal(a, b) {
 
 /***/ }),
 
-/***/ 1934:
+/***/ 2533:
 /***/ ((module) => {
 
 "use strict";
@@ -6572,7 +6556,7 @@ function escapeJsonPtr(str) {
 
 /***/ }),
 
-/***/ 2222:
+/***/ 20:
 /***/ (function(__unused_webpack_module, exports) {
 
 /** @license URI.js v4.4.1 (c) 2011 Gary Court. License: http://github.com/garycourt/uri-js */
@@ -8021,6 +8005,22 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 /***/ }),
 
+/***/ 2228:
+/***/ ((module) => {
+
+"use strict";
+module.exports = JSON.parse('{"$id":"https://raw.githubusercontent.com/ajv-validator/ajv/master/lib/refs/data.json#","description":"Meta-schema for $data reference (JSON AnySchema extension proposal)","type":"object","required":["$data"],"properties":{"$data":{"type":"string","anyOf":[{"format":"relative-json-pointer"},{"format":"json-pointer"}]}},"additionalProperties":false}');
+
+/***/ }),
+
+/***/ 278:
+/***/ ((module) => {
+
+"use strict";
+module.exports = JSON.parse('{"$schema":"http://json-schema.org/draft-07/schema#","$id":"http://json-schema.org/draft-07/schema#","title":"Core schema meta-schema","definitions":{"schemaArray":{"type":"array","minItems":1,"items":{"$ref":"#"}},"nonNegativeInteger":{"type":"integer","minimum":0},"nonNegativeIntegerDefault0":{"allOf":[{"$ref":"#/definitions/nonNegativeInteger"},{"default":0}]},"simpleTypes":{"enum":["array","boolean","integer","null","number","object","string"]},"stringArray":{"type":"array","items":{"type":"string"},"uniqueItems":true,"default":[]}},"type":["object","boolean"],"properties":{"$id":{"type":"string","format":"uri-reference"},"$schema":{"type":"string","format":"uri"},"$ref":{"type":"string","format":"uri-reference"},"$comment":{"type":"string"},"title":{"type":"string"},"description":{"type":"string"},"default":true,"readOnly":{"type":"boolean","default":false},"examples":{"type":"array","items":true},"multipleOf":{"type":"number","exclusiveMinimum":0},"maximum":{"type":"number"},"exclusiveMaximum":{"type":"number"},"minimum":{"type":"number"},"exclusiveMinimum":{"type":"number"},"maxLength":{"$ref":"#/definitions/nonNegativeInteger"},"minLength":{"$ref":"#/definitions/nonNegativeIntegerDefault0"},"pattern":{"type":"string","format":"regex"},"additionalItems":{"$ref":"#"},"items":{"anyOf":[{"$ref":"#"},{"$ref":"#/definitions/schemaArray"}],"default":true},"maxItems":{"$ref":"#/definitions/nonNegativeInteger"},"minItems":{"$ref":"#/definitions/nonNegativeIntegerDefault0"},"uniqueItems":{"type":"boolean","default":false},"contains":{"$ref":"#"},"maxProperties":{"$ref":"#/definitions/nonNegativeInteger"},"minProperties":{"$ref":"#/definitions/nonNegativeIntegerDefault0"},"required":{"$ref":"#/definitions/stringArray"},"additionalProperties":{"$ref":"#"},"definitions":{"type":"object","additionalProperties":{"$ref":"#"},"default":{}},"properties":{"type":"object","additionalProperties":{"$ref":"#"},"default":{}},"patternProperties":{"type":"object","additionalProperties":{"$ref":"#"},"propertyNames":{"format":"regex"},"default":{}},"dependencies":{"type":"object","additionalProperties":{"anyOf":[{"$ref":"#"},{"$ref":"#/definitions/stringArray"}]}},"propertyNames":{"$ref":"#"},"const":true,"enum":{"type":"array","items":true,"minItems":1,"uniqueItems":true},"type":{"anyOf":[{"$ref":"#/definitions/simpleTypes"},{"type":"array","items":{"$ref":"#/definitions/simpleTypes"},"minItems":1,"uniqueItems":true}]},"format":{"type":"string"},"contentMediaType":{"type":"string"},"contentEncoding":{"type":"string"},"if":{"$ref":"#"},"then":{"$ref":"#"},"else":{"$ref":"#"},"allOf":{"$ref":"#/definitions/schemaArray"},"anyOf":{"$ref":"#/definitions/schemaArray"},"oneOf":{"$ref":"#/definitions/schemaArray"},"not":{"$ref":"#"}},"default":true}');
+
+/***/ }),
+
 /***/ 5747:
 /***/ ((module) => {
 
@@ -8086,10 +8086,10 @@ module.exports = require("path");
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-const core = __nccwpck_require__(5127);
+const core = __nccwpck_require__(2186);
 const fs = __nccwpck_require__(5747);
-const Ajv = __nccwpck_require__(9490);
-const addFormats = __nccwpck_require__(6759);
+const Ajv = __nccwpck_require__(2426);
+const addFormats = __nccwpck_require__(567);
 
 const schema_path = core.getInput('main_schema_path');
 const schemas_dir = core.getInput('additional_schemas_dir');
@@ -8114,7 +8114,8 @@ test(require(data_path));
 function test(data) {
   const valid = validate(data);
   if (valid) core.setOutput('validity', "Valid!")
-    else core.setOutput('validity', "Invalid: " + ajv.errorsText(validate.errors))
+    else
+        core.setFailed('validity', "Invalid: " + ajv.errorsText(validate.errors))
 };
 })();
 
