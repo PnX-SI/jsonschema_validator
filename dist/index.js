@@ -8111,6 +8111,7 @@ const validate = ajv.compile(schema);
 
 test(require(data_path));
 
+// Test de validité : si valide, l'action va à son terme, si non valide, l'action échoue et les erreurs s'affichent
 function test(data) {
   const valid = validate(data);
   if (valid) core.setOutput('validity', "Valid!")
