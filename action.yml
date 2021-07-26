@@ -17,5 +17,5 @@ outputs:
   validity: # output will be available to future steps
     description: 'Validity of the data according to the schema'
 runs:
-  using: 'node16'
+  using: 'node12'
   main: 'dist/index.js'
