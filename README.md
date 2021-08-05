@@ -32,7 +32,7 @@ jobs:
       - name: checking out repo
         uses: actions/checkout@v2
       - name: build the schema and validate the data
-        uses: idrissad/jsonschema_validator@main
+        uses: pnx-si/jsonschema_validator@v1.0.0
         id: validation
         with:
           main_schema_path: ${{ github.workspace }}/schema.json
